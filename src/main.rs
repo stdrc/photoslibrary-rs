@@ -11,9 +11,19 @@ async fn main() -> anyhow::Result<()> {
 
     let photos = photosdb.visible_photos().await?;
     pin_mut!(photos);
+    let mut p = vec![];
     while let Some(photo) = photos.next().await {
         let photo = photo?;
-        println!("{}: {}", photo.pk, photo.uuid);
+        p.push(photo);
+        // println!(
+        //     "{}: {}, {}, {}, {}",
+        //     photo.pk,
+        //     photo.extra().await.unwrap().original_filename,
+        //     photo.created,
+        //     photo.modified,
+        //     photo.added
+        // );
     }
+    println!("count: {}", p.len());
     Ok(())
 }
