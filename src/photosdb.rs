@@ -7,6 +7,10 @@ use std::{
 };
 use tokio::sync::OnceCell;
 
+/// Apple epoch time starts from Jan 1, 2001, GMT.
+///
+/// - <https://www.epochconverter.com/coredata>
+/// - <https://developer.apple.com/documentation/corefoundation/cfabsolutetime>
 const APPLE_EPOCH: i64 = 978307200;
 
 pub struct PhotosDb {
