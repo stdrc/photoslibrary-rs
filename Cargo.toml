@@ -1,0 +1,10 @@
+[package]
+name = "photoslibrary"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+anyhow = "1"
+futures = "0.3"
+libsql = "0.6"
+tokio = { version = "1.43", features = ["full"] }
