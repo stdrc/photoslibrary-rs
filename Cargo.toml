@@ -2,6 +2,8 @@
 name = "photoslibrary"
 version = "0.1.0"
 edition = "2021"
+license = "MIT"
+description = "Interact with Apple Photos.app library"
 
 [dependencies]
 anyhow = "1"
